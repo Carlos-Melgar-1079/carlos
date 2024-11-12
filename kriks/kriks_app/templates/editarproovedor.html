@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block cuerpo %}
+
+<div class="row"> 
+    <div class="col-md-4 offset-md-4">
+        <h2>editar materia</h2>
+        <!--Aqui codigo tarjeta-->
+
+<div class="card">
+        <div class="card-body">
+        <form action="/editarMateria/" method="POST"> {% csrf_token %} <!---falta action-->
+
+
+            <div class="form-group">
+                <input type="text " id="txtcodigo" name="txtcodigo" class="form-control" value="{{mismaterias.id}}" minlenght="1" maxLenght"6" readonly required>
+            </div>
+            <div class="form-group py-3">
+                <input type="text " id="txtnombre" name="txtnombre" class="form-control" value="{{mismaterias.nombre}}" maxLenght"100"  required>
+            </div>
+            <div class="form-group py-3">
+                <input type="text " id="txtnombre" name="txtnombre" class="form-control" value="{{mismaterias.telefono}}" maxLenght"100"  required>
+            </div>
+            <div class="form-group py-3">
+                <input type="text " id="txtnombre" name="txtnombre" class="form-control" value="{{mismaterias.edad}}" maxLenght"100"  required>
+            </div>
+            <div class="form-group py-3">
+                <input type="text " id="txtnombre" name="txtnombre" class="form-control" value="{{mismaterias.INE}}" maxLenght"100"  required>
+            </div>
+            
+            <div class="form-group py-2">
+                <input type="text " id="numcreditos" name="numcreditos" class="form-control"  min="1" max="9" value="{{mismaterias.permiso}}" required>
+            </div>
+            <div class="form-group py-3">
+                <input type="text " id="txtnombre" name="txtnombre" class="form-control" value="{{mismaterias.matricula}}" maxLenght"100"  required>
+            </div>
+            <div class="form-group py-2">
+                <button type="submit" class="btn btn-primary">GUARDAR MATERIA</button>
+            </div>
+        </form>
+    </div>
+    </div>
+
+        <!--Aqui codigo tarjeta-->
+
+    </div>
+</div>
+
+{% endblock  %}
